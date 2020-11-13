@@ -38,3 +38,8 @@ body{
 .delete{
   background-color: maroon;
 }
+
+.urgent-input{
+  display: flex;
+  justify-content: center;
+}
