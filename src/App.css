@@ -1,3 +1,21 @@
+body{
+  background-color: mediumaquamarine;
+}
+
+
+.todo-form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  justify-content: space-between;
+  background-color: mintcream;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
 .todo-list {
   display: flex;
   list-style-type: none;
@@ -9,6 +27,8 @@
   height: 150px;
   box-shadow: 0 6px 15px -15px black;
   text-align: center;
+  background-color: mintcream;
+  border-radius: 6px;
 }
 
 .urgent {

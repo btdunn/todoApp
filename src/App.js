@@ -1,5 +1,6 @@
 import './App.css';
 import TodoList from './components/TodoList'
+import TodoForm from './components/TodoForm'
 import { Component } from 'react'
 
 
@@ -22,6 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Todo App</h1>
+        <TodoForm />
         <TodoList deleteTodo={this.deleteTodo} todos ={this.state.todos}/>
       </div>
     );
