@@ -14,6 +14,12 @@ class App extends Component {
     ]
   }
 
+  addTodo = (newTodo) => {
+    this.setState({
+      todos: [...this.state.todos, newTodo]
+    })
+  }
+
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => todo.id !== id)
     this.setState({todos})
@@ -23,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Todo App</h1>
-        <TodoForm />
+        <TodoForm addTodo={this.addTodo} />
         <TodoList deleteTodo={this.deleteTodo} todos ={this.state.todos}/>
       </div>
     );

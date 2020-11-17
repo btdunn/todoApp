@@ -20,10 +20,15 @@ export default class TodoForm extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addTodo(this.state)
+  }
+
   render(){
     const {title, content, urgent} = this.state
     return (
-      <form className="todo-form" action="">
+      <form className="todo-form" onSubmit={this.handleSubmit}>
         <h2>Create a Todo</h2>
         <label>Title</label>
         <input type="text" name="title" value={title} onChange={this.handleChange}/>
